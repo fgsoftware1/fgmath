@@ -16,24 +16,24 @@ namespace Fgmath
 		Matrix3(float m0, float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8);
 
 		~Matrix3();
-		
-		void operator+=(const Matrix3 &m);
-		void operator*=(const float s);
-		void operator*=(const Matrix3& m);
-		
+
+		void operator+=(const Matrix3 & m);
+		void operator*=(float s);
+		void operator*=(const Matrix3 & m);
+
 		Matrix3 operator=(const Matrix3 & value);
-		Matrix3 operator+(const Matrix3 &m) const;
-		Matrix3 operator*(const float s);
-		Matrix3 operator*(const Matrix3& m) const;
-		
+		Matrix3 operator+(const Matrix3 & m) const;
+		Matrix3 operator*(float s);
+		Matrix3 operator*(const Matrix3 & m) const;
+
 		Vector3 operator*(const Vector3 & v) const;
 
 		void setMatrixAsIdentityMatrix();
 		void invertMatrix();
 		void invertAndTransposeMatrix();
 		void show();
-		void setMatrixAsInverseOfGivenMatrix(const Matrix3& m);
-		void setMatrixAsTransposeOfGivenMatrix(const Matrix3& m);
+		void setMatrixAsInverseOfGivenMatrix(const Matrix3 & m);
+		void setMatrixAsTransposeOfGivenMatrix(const Matrix3 & m);
 		void makeRotationMatrixAboutXAxisByAngle(float uAngle);
 		void makeRotationMatrixAboutYAxisByAngle(float uAngle);
 		void makeRotationMatrixAboutZAxisByAngle(float uAngle);
@@ -43,8 +43,8 @@ namespace Fgmath
 
 		Matrix3 getInverseOfMatrix() const;
 		Matrix3 getTransposeOfMatrix() const;
-		
-		Vector3 transformVectorByMatrix(const Vector3& v) const;
+
+		Vector3 transformVectorByMatrix(const Vector3 & v) const;
 
 		float getMatrixDeterminant() const;
 	};

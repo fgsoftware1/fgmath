@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "Constants.h"
+#include "Quaternion.h"
 
 namespace Fgmath
 {
@@ -121,34 +122,46 @@ namespace Fgmath
 	}
 
 	float Vector3::magnitudeSquare(){
-		float magnitude=x*x+y*y+z*z;
-        
+		float magnitude=x * x + y * y + z * z;
+
 		return magnitude;
 	}
 
 	void Vector3::zero(){
-		x = 0;
-		y = 0;
-		z = 0;
+		x=0;
+		y=0;
+		z=0;
 	}
 
 	void Vector3::absolute(){
-		x = std::abs(x);
-		y = std::abs(y);
-		z = std::abs(z);
+		x=std::abs(x);
+		y=std::abs(y);
+		z=std::abs(z);
 	}
 
 	Vector3 Vector3::rotateVectorAboutAngleAndAxis(float uAngle, Vector3 & uAxis){
-		
+		Quaternion p(0,(*this));
+
+		uAxis.normalize();
+
+		Quaternion q(uAngle,uAxis);
+
+		q.convertToUnitNormQuaternion();
+
+		Quaternion qInverse=q.inverse();
+
+		Quaternion rotatedVector=q * p * qInverse;
+
+		return rotatedVector.v;
 	}
 
 	void Vector3::show(){
-		std::cout<<"("<<x<<","<<y<<","<<z<<")"<<std::endl;
+		std::cout << "(" << x << "," << y << "," << z << ")" << std::endl;
 	}
 
 	void Vector3::negate(){
-		x = -1 * x;
-		y = -1 * y;
-		z = -1 * z;
+		x=-1 * x;
+		y=-1 * y;
+		z=-1 * z;
 	}
 }
