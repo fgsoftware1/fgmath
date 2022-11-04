@@ -1,9 +1,9 @@
-﻿#include "Matrix3.hpp"
+﻿#include "include/Matrix3.hpp"
 
 #include <cmath>
 #include <iostream>
 
-#include "Constants.h"
+#include "include/Constants.h"
 
 namespace fgengine
 {
