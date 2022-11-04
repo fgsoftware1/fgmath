@@ -2,3 +2,4 @@
 */*.a
 */fgmath
 */*.out
+.ninja_log
