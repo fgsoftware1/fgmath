@@ -1,11 +1,11 @@
 #include "iostream"
-#include "Vector3.h"
+#include "Vector3.hpp"
 
 int main(int argc, const char * argv[]){
-	Fgmath::Vector3 v(0,1,0);
-	Fgmath::Vector3 axis(1,0,0);
+	fgengine::math::Vector3 v(0,1,0);
+	fgengine::math::Vector3 axis(1,0,0);
 
-	Fgmath::Vector3 rotatedVector=v.rotateVectorAboutAngleAndAxis(90,axis);
+	fgengine::math::Vector3 rotatedVector=v.rotateVectorAboutAngleAndAxis(90,axis);
 
 	rotatedVector.show();
 
