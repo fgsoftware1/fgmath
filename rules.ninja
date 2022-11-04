@@ -1,0 +1,15 @@
+rule HELP
+    command = ninja -t targets
+    description = targets available:
+rule CLEAN
+    command = ninja -t clean
+    description = cleaning built files
+rule compile-cpp
+    command = g++ -c -I src/include/ -o $out
+    description = --CXX compiling $in
+rule link
+	command = g++ -o $out $in
+	description = --CXX linking $in
+rule lib
+	command = ar rcs $out $in
+	description = --AR archiving $in
