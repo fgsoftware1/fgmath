@@ -1,0 +1,18 @@
+include rules.ninja
+
+#utils
+build help: HELP
+build clean: CLEAN
+
+#compile
+build ./build/vector3.o: compile-cpp ./src/Vector3.cpp
+build ./build/matrix3.o: compile-cpp ./src/Matrix3.cpp
+build ./build/quaternion.o: compile-cpp ./src/Quaternion.cpp
+
+#lib
+build ./lib/libfgmath.a: lib ./build/vector3.o ./build/matrix3.o ./build/quaternion.o
+
+#link
+build ./build/fgmath: link ./src/fgmath.cpp ./lib/libfgmath.a
+
+default ./build/vector3.o ./build/matrix3.o ./build/quaternion.o ./lib/libfgmath.a ./build/fgmath
