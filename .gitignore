@@ -1,5 +1,5 @@
-*/*.o
-*/*.a
-*/fgmath
-*/*.out
-.ninja_log
+build/*
+lib/*
+
+!build/.gitkeep
+!lib/.gitkeep
