@@ -1,0 +1,13 @@
+# ninja log v5
+1	174	7016435901495519	CMakeFiles/fgmath.dir/fgmath.cpp.obj	92887c392ad1a297
+31	219	7016435901855316	CMakeFiles/fgmath.dir/vector3.cpp.obj	1ca73d78bfef0552
+20	817	7016435907930368	CMakeFiles/fgmath.dir/vector2.cpp.obj	82e9e7fbf73303b5
+11	836	7016435908110258	CMakeFiles/fgmath.dir/matrix2.cpp.obj	a37f2d95ca864c7d
+837	944	7016435909169642	fgmath.lib	8772213e3d5301ac
+0	585	7016436483591792	CMakeFiles/fgmath.dir/vector2.cpp.obj	82e9e7fbf73303b5
+586	652	7016436484241404	fgmath.lib	450c0d2b05381bcc
+1	16	0	clean	9992afb1f91dc381
+16	129	7016436527019851	CMakeFiles/fgmath.dir/vector3.cpp.obj	1ca73d78bfef0552
+1	733	7016436533076361	CMakeFiles/fgmath.dir/vector2.cpp.obj	82e9e7fbf73303b5
+7	738	7016436533136324	CMakeFiles/fgmath.dir/matrix2.cpp.obj	a37f2d95ca864c7d
+739	804	7016436533745973	fgmath.lib	450c0d2b05381bcc
