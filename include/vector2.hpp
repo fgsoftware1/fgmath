@@ -16,22 +16,35 @@ namespace fgmath
 		~Vector2();
 		Vector2(float x, float y);
 
+		static const Vector2 down;
+		static const Vector2 up;
+		static const Vector2 left;
+		static const Vector2 right;
+		static const Vector2 one;
+
 		Vector2 operator+(const Vector2& v) const;
 		Vector2 operator-(const Vector2& v) const;
 		Vector2 operator*(float s) const;
 		Vector2 operator/(float s) const;
-		Vector2 normalize() const;
+		Vector2 normalized() const;
 
-		void operator+=(const Vector2& v);
-		void operator-=(const Vector2& v);
-		void operator*=(float s);
-		void operator/=(float s);
+		Vector2& operator+=(const Vector2& v);
+		Vector2& operator-=(const Vector2& v);
+		Vector2& operator*=(float s);
+		Vector2& operator/=(float s);
+
+		void normalize();
 
 		bool operator==(const Vector2& other) const;
 		bool operator!=(const Vector2& other) const;
 
-		float dot(const Vector2& v) const;
 		float magnitude() const;
+		float sqrtMagnitude() const;
+
+		static float distance(const Vector2& a, const Vector2& b);
+    	static float dot(const Vector2& a, const Vector2& b);
+
+		std::string Vector2::toString() const;
 	};
 }
 
