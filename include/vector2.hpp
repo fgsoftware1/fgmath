@@ -28,10 +28,10 @@ namespace fgmath
 		Vector2 operator/(float s) const;
 		Vector2 normalized() const;
 
-		Vector2& operator+=(const Vector2& v);
-		Vector2& operator-=(const Vector2& v);
-		Vector2& operator*=(float s);
-		Vector2& operator/=(float s);
+		void operator+=(const Vector2& v);
+		void operator-=(const Vector2& v);
+		void operator*=(float s);
+		void operator/=(float s);
 
 		void normalize();
 

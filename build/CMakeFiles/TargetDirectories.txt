@@ -1,0 +1,3 @@
+C:/Users/gabri/Desktop/projects/fgeditor/external/fgmath/build/CMakeFiles/fgmath.dir
+C:/Users/gabri/Desktop/projects/fgeditor/external/fgmath/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/gabri/Desktop/projects/fgeditor/external/fgmath/build/CMakeFiles/ZERO_CHECK.dir

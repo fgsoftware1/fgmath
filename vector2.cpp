@@ -13,25 +13,25 @@ namespace fgmath {
 	Vector2::~Vector2() {};
 	Vector2::Vector2(float uX, float uY) : x(uX), y(uY) {};
 
-	Vector2& Vector2::operator+=(const Vector2& v)
+	void Vector2::operator+=(const Vector2& v)
 	{
 		x += v.x;
 		y += v.y;
 	}
 
-	Vector2& Vector2::operator-=(const Vector2& v)
+	void Vector2::operator-=(const Vector2& v)
 	{
 		x -= v.x;
 		y -= v.y;
 	}
 
-	Vector2& Vector2::operator*=(const float s)
+	void Vector2::operator*=(const float s)
 	{
 		x *= s;
 		y *= s;
 	}
 
-	Vector2& Vector2::operator/=(const float s)
+	void Vector2::operator/=(const float s)
 	{
 		x = x / s;
 		y = y / s;
